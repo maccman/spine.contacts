@@ -21,9 +21,5 @@ Contact.include({
   fullName: function(){
     if ( !this.first_name && !this.last_name ) return;
     return(this.first_name + " " + this.last_name);
-  },
-  
-  exists: function(){
-    return(this.id && this.id in this.parent.records);
   }
 });

@@ -9,6 +9,7 @@
   <script src="lib/jquery.link.js" type="text/javascript" charset="utf-8"></script>
 
   <script src="lib/spine.js" type="text/javascript" charset="utf-8"></script>
+  <script src="lib/spine.list.js" type="text/javascript" charset="utf-8"></script>
   <script src="lib/spine.model.local.js" type="text/javascript" charset="utf-8"></script>
   <script src="lib/spine.model.filter.js" type="text/javascript" charset="utf-8"></script>
   <script src="app/utils.js" type="text/javascript" charset="utf-8"></script>
@@ -19,7 +20,7 @@
   <script src="app/application.js" type="text/javascript" charset="utf-8"></script>
   
   <script type="text/x-jquery-tmpl" id="contactsTemplate">
-    <li>
+    <li class="item">
       <img src="images/missing.png" />
       {{if fullName()}}
         <span class="name">${fullName()}</span>

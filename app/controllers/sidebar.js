@@ -1,28 +1,45 @@
 jQuery(function($){
 
 window.Sidebar = Spine.Controller.create({
+  // Create instance variables:
+  //  this.items //=> <ul></ul>
+  //  this.input //=> <input />
   elements: {
     ".items": "items",
-    "input": "input"
+    "input":  "input"
   },
   
+  // Attach event delegation
   events: {
-    "click .items li": "click",
     "click button": "create",
-    "keyup input": "filter"
+    "keyup input":  "filter",
+    "click input":  "filter"
   },
   
-  scoped: ["render", "change"],
+  // Ensure these functions are called with the current
+  // scope as they're used in event callbacks
+  scoped: ["render"],
   
-  init: function(){
-    Contact.bind("refresh change", this.render);
-    this.App.bind("show:contact edit:contact", this.change);    
-  },
-  
+  // Render template
   template: function(items){
     return($("#contactsTemplate").tmpl(items));
   },
   
+  init: function(){
+    this.list = Spine.List.inst({
+      el: this.items,
+      template: this.template
+    });
+    
+    this.list.bind("change", this.proxy(function(item){
+      this.App.trigger("show:contact", item);
+    }));
+    this.App.bind("show:contact edit:contact", this.list.change);
+    
+    // Re-render whenever contacts are populated or changed
+    Contact.bind("refresh change", this.render);
+  },
+
   filter: function(){
     this.query = this.input.val();
     this.render();
@@ -31,50 +48,16 @@ window.Sidebar = Spine.Controller.create({
   render: function(){
     // Filter items by query
     var items = Contact.filter(this.query);
-    
     // Filter by first name
     items = items.sort(function(a, b){ return a.first_name > b.first_name });
+    this.list.render(items);
+  },
     
-    // Render the list of contacts
-    this.items.html(this.template(items));
-    
-    // Set the currently selected item
-    this.setCurrent(this.current);
-    
-    // Select first contact, if nothing else is selected
-    if ( !this.current || !this.current.exists() )
-      this.children(":first").click();
-  },
-  
-  children: function(sel){
-    return this.items.find("li" + (sel || ""));
-  },
-  
-  change: function(item){
-    this.setCurrent(item);
-  },
-  
-  setCurrent: function(item){
-    if ( !item ) return;
-    this.current = item;
-
-    this.deactivate();
-    this.children().forItem(this.current).addClass("current");    
-  },
-  
-  deactivate: function(){
-    this.children().removeClass("current");
-  },
-  
-  click: function(e){
-    var item = $(e.target).item();
-    this.App.trigger("show:contact", item);
-  },
-  
+  // Called when 'Create' button is clicked
   create: function(){
     var item = Contact.create();
     this.App.trigger("edit:contact", item);
   }
 });
   
-})
+});
