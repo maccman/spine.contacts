@@ -49,7 +49,7 @@ window.Sidebar = Spine.Controller.create({
     // Filter items by query
     var items = Contact.filter(this.query);
     // Filter by first name
-    items = items.sort(function(a, b){ return a.first_name > b.first_name });
+    items = items.sort(Contact.nameSort);
     this.list.render(items);
   },
     

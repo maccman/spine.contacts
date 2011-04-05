@@ -8,6 +8,8 @@ Contact.extend(Spine.Model.Filter);
 Contact.selectAttributes = ["first_name", "last_name", "email", 
                             "mobile", "work", "address"];
 
+Contact.nameSort = function(a, b){ return a.first_name > b.first_name };
+
 Contact.include({
   selectAttributes: function(){
     var result = {};

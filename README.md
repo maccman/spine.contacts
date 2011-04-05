@@ -16,3 +16,7 @@ The application's CSS is customized towards WebKit browsers (Safari/Chrome) and 
 1. Checkout the Git repository 
 1. Open index.html in Safari/Chrome
 1. Check out app/controllers and app/models to see how everything works
+
+#Screenshot
+
+![Spine Contacts](https://lh5.googleusercontent.com/_IH1OempnqUc/TZpgYfnlUBI/AAAAAAAABKg/UYLhdmoc15o/s800/contacts.png)
