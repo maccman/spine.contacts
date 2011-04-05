@@ -1,6 +1,6 @@
 #Spine Contacts
 
-Spine Contacts is an example application for the Spine JavaScript library.
+Spine Contacts is an example application for the [Spine](http://github.com/maccman/spine) JavaScript library.
 
 The application's CSS is customized towards WebKit browsers (Safari/Chrome) and won't display properly on others. 
 
