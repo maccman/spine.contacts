@@ -4,6 +4,10 @@ Spine Contacts is an example application for the [Spine](http://github.com/maccm
 
 The application's CSS is customized towards WebKit browsers (Safari/Chrome) and won't display properly on others. 
 
+#Live Demo
+
+[Checkout the live demo](http://maccman.github.com/spine.contacts/) in Safari/Chrome.
+
 #Features
 
 * Contact CRUD
