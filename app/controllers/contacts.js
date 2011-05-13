@@ -49,7 +49,8 @@ jQuery(function($){
     },
     
     destroy: function(){
-      this.current.destroy();
+      if (confirm("Are you sure?"))
+        this.current.destroy();
     },
     
     email: function(){
