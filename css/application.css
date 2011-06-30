@@ -1,4 +1,19 @@
 body, html {
+  display: -webkit-box;
+  -webkit-box-align: stretch;
+  -webkit-box-orient: vertical;
+
+  display: -moz-box;
+  -moz-box-align: stretch;
+  -moz-box-orient: vertical;
+
+  display: box;
+  box-align: stretch;
+  box-orient: vertical;
+
+  height: 100%;
+  width: 100%;
+  
   margin: 0;
   padding: 0;
 }
@@ -183,6 +198,44 @@ textarea {
   height: 70px;
 }
 
+.autoflow {
+  overflow: auto;
+}
+
+.flex, flex1 {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.hbox {
+  display: -webkit-box;
+  -webkit-box-align: stretch;
+  -webkit-box-orient: horizontal;
+
+  display: -moz-box;
+  -moz-box-align: stretch;
+  -moz-box-orient: horizontal;
+
+  display: box;
+  box-align: stretch;
+  box-orient: horizontal;
+}
+
+.vbox {
+  display: -webkit-box;
+  -webkit-box-align: stretch;
+  -webkit-box-orient: vertical;
+
+  display: -moz-box;
+  -moz-box-align: stretch;
+  -moz-box-orient: vertical;
+
+  display: box;
+  box-align: stretch;
+  box-orient: vertical;
+}
+
 .vdivide {
   width: 6px;
   border: 1px solid #c5c5c5;
@@ -224,41 +277,8 @@ textarea {
   font-weight: bold;
 }
 
-#wrapper {
-  position: absolute;
-  left: 0;
-  top: 50px;
-  right: 0;
-  bottom: 0;
-  
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;
-  -webkit-box-pack: left;
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-align: stretch;
-  -moz-box-pack: left;
-}
-
 #sidebar {
   width: 300px;
-  
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-align: stretch;
-  -webkit-box-pack: left;
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-align: stretch;
-  -moz-box-pack: left;
-}
-
-#sidebar .items {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  overflow: auto;
 }
 
 #sidebar ul {

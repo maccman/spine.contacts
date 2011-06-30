@@ -120,14 +120,14 @@
     <h1>Spine Contacts</h1>
   </header>
   
-  <div id="wrapper">
+  <div id="wrapper" class="hbox flex">
   
-  <div id="sidebar">
+  <div id="sidebar" class="vbox">
     <div class="search">
       <input type="search" placeholder="Search" results="0" incremental="true" autofocus>
     </div>
     
-    <ul class="items">
+    <ul class="items vbox flex autoflow">
     </ul>
     
     <footer>
@@ -137,21 +137,21 @@
   
   <div class="vdivide"></div>
   
-  <div id="contacts">
-    <div class="show">
+  <div id="contacts" class="vbox flex">
+    <div class="show vbox flex">
       <ul class="options">
         <li class="optEdit">Edit contact</li>
         <li class="optEmail">Email contact</li>
       </ul>
-      <div class="content"></div>
+      <div class="content vbox flex autoflow"></div>
     </div>
     
-    <div class="edit">
+    <div class="edit vbox flex">
       <ul class="options">
         <li class="optSave default">Save contact</li>
         <li class="optDestroy">Delete contact</li>
       </ul>
-      <div class="content"></div>
+      <div class="content vbox flex autoflow"></div>
     </div>
   </div>
   
