@@ -1,0 +1,9 @@
+<header>
+  <input type="search" placeholder="search" results="0" incremental="true" autofocus>
+</header>
+
+<div class="items"></div>
+
+<footer>
+  <button>New Contact</button>
+</footer>

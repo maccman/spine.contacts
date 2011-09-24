@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>App</title>
+  <link rel="stylesheet" href="/application.css" type="text/css" charset="utf-8">
+  <script src="/application.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    var jQuery  = require("jqueryify");
+    var exports = this;
+    jQuery(function(){
+      var App = require("index");
+      exports.app = new App({el: $("#article")});      
+    });
+  </script>  
+</head>
+<body>
+  <header id="header"><h1>Spine Contacts</h1></header>
+  <article id="article"></article>
+</body>
+</html>

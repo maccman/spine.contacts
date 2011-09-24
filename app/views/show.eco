@@ -1,0 +1,8 @@
+<header>
+  <a class="edit">Edit</a>
+</header>
+
+<div class="content">
+  <p><%= @name %></p>
+  <p><%= @email %></p>
+</div>

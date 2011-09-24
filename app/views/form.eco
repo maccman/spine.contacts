@@ -1,0 +1,20 @@
+<header>
+  <a class="save">Save</a>
+  <a class="delete">Delete</a>
+</header>
+
+<div class="content">
+  <form>
+    <label>
+      <span>Name</span>
+      <input type="text" name="name" value="<%= @name %>">
+    </label>
+  
+    <label>
+      <span>Email</span>
+      <input type="email" name="email" value="<%= @email %>">
+    </label>  
+    
+    <button>Save</button>
+  </form>
+</div>
