@@ -36,6 +36,8 @@ class Edit extends Spine.Controller
     'submit form': 'submit'
     'click .save': 'submit'
     'click .delete': 'delete'
+    'click .addLocation': 'addLocation'
+    'click .destroyLocation': 'destroyLocation'
     
   elements: 
     'form': 'form'
@@ -43,6 +45,8 @@ class Edit extends Spine.Controller
   constructor: ->
     super
     @active @change
+    Contact.bind 'change', (contact) =>
+      @render() if contact.eql(@item)
   
   render: ->
     @html require('views/form')(@item)
@@ -59,6 +63,12 @@ class Edit extends Spine.Controller
     
   delete: ->
     @item.destroy() if confirm('Are you sure?')
+    
+  addLocation: ->
+    @item.addLocation()
+  
+  destroyLocation: ->
+    @item.destroyLocation()
     
 class Main extends Spine.Controller
   className: 'main viewport'

@@ -15,6 +15,19 @@
       <input type="email" name="email" value="<%= @email %>">
     </label>  
     
-    <button>Save</button>
+    <label>
+      <span>Mobile</span>
+      <input type="text" name="mobile" value="<%= @mobile %>">
+    </label>
+    
+    <% unless @lon: %>
+      <a class="addLocation">Attach Location</a>
+    <% else: %>
+      <a class="destroyLocation">Remove Location</a>
+    <% end %>
+    
+    <p>
+      <button>Save</button>
+    </p>
   </form>
 </div>
