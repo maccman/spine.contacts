@@ -16,7 +16,7 @@ label span{display:block;margin-bottom:6px;margin-left:-3px;font-weight:bold;fon
 label input{font-size:14px;display:block}
 label input[type="checkbox"]{width:15px !important;margin-right:7px;display:inline-block}
 label input[type="checkbox"] + span{display:inline}
-label input[type="text"],label input[type="email"],input[type="password"]{width:220px;margin:0 2px 0 0;padding:4px 8px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+label input[type="text"],label input[type="email"],input[type="password"],input[type="mobile"]{width:220px;margin:0 2px 0 0;padding:4px 8px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 textarea{width:220px;margin:0 2px 0 0;padding:4px 8px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 textarea,input[type="text"],input[type="email"],input[type="password"]{border:1px solid #9e9fa2;color:#363636;text-shadow:0 1px 1px #fff;font-size:17px;outline:none;padding:10px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;background:#e6e6e7;background:-webkit-gradient(linear,left top,left bottom,from(#e6e6e7),to(#fafafa));background:-moz-linear-gradient(top,#e6e6e7,#fafafa);background:linear-gradient(top,#e6e6e7,#fafafa);background:-webkit-gradient(linear,left top,left bottom,from(#e6e6e7),color-stop(.3,#fafafa),to(#fafafa))}
 textarea{-moz-border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;height:70px}
