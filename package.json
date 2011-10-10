@@ -1,12 +1,12 @@
 {
   "name": "app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": "*"
   },
   "dependencies": { 
     "ace": "~0.0.1",
-    "hem": "~0.0.6",
+    "hem": "latest",
     "es5-shimify": "~0.0.1",
     "json2ify": "~0.0.1",
     "jqueryify": "~0.0.1",

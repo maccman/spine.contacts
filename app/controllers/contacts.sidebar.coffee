@@ -1,6 +1,6 @@
 Spine   = require('spine')
 Contact = require('models/contact')
-List    = require('lib/list')
+List    = require('spine/lib/list')
 $       = Spine.$
 
 class Sidebar extends Spine.Controller
