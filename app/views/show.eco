@@ -5,4 +5,9 @@
 <div class="content">
   <p><%= @name %></p>
   <p><%= @email %></p>
+  <p><%= @mobile %></p>
+  
+  <% if @lat and @lon: %>
+  <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @lat %>,<%= @lon %>&zoom=15&size=400x400&sensor=false">
+  <% end %>
 </div>
