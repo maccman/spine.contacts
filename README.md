@@ -4,7 +4,7 @@ Spine Contacts is an example application for the [Spine](http://github.com/maccm
 
 ##Live Demo
 
-[Checkout the live demo](http://maccman.github.com/spine.contacts/) in Safari/Chrome.
+[Checkout the live demo](http://spine-contacts.herokuapp.com) in Safari/Chrome.
 
 ##Features
 
