@@ -1,7 +1,3 @@
 <div class="item">
-<% if @name: %>
-  <%= @name %>
-<% else: %>
-  <i>No Name</i>
-<% end %>
+  <%= @name or "<i>No Name</i>" %>
 </div>
