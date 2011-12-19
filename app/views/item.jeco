@@ -1,3 +1,4 @@
 <div class="item">
-  <%= @name or "<i>No Name</i>" %>
+  <%= @name %>
+  <%- "<i>No Name</i>" unless @name %>                                          
 </div>
