@@ -7,7 +7,6 @@
     "spine/lib/local",
     "spine/lib/ajax",
     "spine/lib/route",
-    "spine/lib/tmpl",
     "spine/lib/list",
     "spine/lib/manager"
   ],
