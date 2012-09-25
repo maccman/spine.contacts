@@ -268,6 +268,7 @@ header#header h1 {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
+  overflow-y: scroll;
 }
 #article .contacts .sidebar .item {
   height: 50px;
