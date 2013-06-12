@@ -1,14 +1,27 @@
 {
-  "dependencies": [
-    "es5-shimify", 
-    "json2ify", 
-    "jqueryify", 
-    "spine",
-    "spine/lib/local",
-    "spine/lib/ajax",
-    "spine/lib/route",
-    "spine/lib/list",
-    "spine/lib/manager"
+  "routes": [
+    { ""        : "./public" }
   ],
-  "libs": []
+
+  "packages": {
+    "spine.contacts": {
+      "modules" : [
+        "es5-shimify", 
+        "json2ify", 
+        "jqueryify", 
+        "spine",
+        "spine/lib/local",
+        "spine/lib/ajax",
+        "spine/lib/route",
+        "spine/lib/list",
+        "spine/lib/manager"
+      ],
+      "paths"  : ["./app"],
+      "target" : "./public/application.js"
+    },
+    "css": {
+      "paths"  : "./css",
+      "target" : "./public/application.css"
+    }
+  }
 }
