@@ -1,6 +1,5 @@
 Spine   = require('spine')
 Contact = require('models/contact')
-List    = require('spine/lib/list')
 $       = Spine.$
 
 class Sidebar extends Spine.Controller
@@ -18,7 +17,7 @@ class Sidebar extends Spine.Controller
     super
     @html require('views/sidebar')()
     
-    @list = new List
+    @list = new Spine.List
       el: @items, 
       template: require('views/item'), 
       selectFirst: true
